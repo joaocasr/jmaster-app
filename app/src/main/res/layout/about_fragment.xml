@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.about.AboutFragment">
+
+    <ImageView
+        android:layout_marginTop="80dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/jmasterabout"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jmaster is an app which was created with the intention of helping all those who are interested in mastering the Japanese language. Have fun :)\n"/>
+    <TextView
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/youtube">
+    </TextView>
+
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="0.7dp"
+        android:background="@color/grey"/>
+    <TextView
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect with us">
+    </TextView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/grey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/instagram_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/insta_logo"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Follow us on instagram"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginStart="5dp"
+        android:id="@+id/youtube_logo"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/youtube_logo"
+        />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Watch us on youtube">
+        </TextView>
+    </LinearLayout>
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\n\n© Copyright 2022 by João Castro">
+    </TextView>
+
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.japaneseapp" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@drawable/jmasterimage"
+        android:label="Jmaster"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JapaneseApp" >
+        <activity
+            android:name=".DrawKanji"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Jmaster"
+            android:theme="@style/Theme.JapaneseApp.NoActionBar" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.JapaneseApp.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".KatakanaquizActivity"
+            android:exported="true" />
+        <activity
+            android:name=".QuizActivity"
+            android:exported="true" />
+        <activity
+            android:name=".kanaopActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DicActivity"
+            android:exported="true" />
+        <activity
+            android:name=".newdicActivity"
+            android:exported="true" />
+        <activity
+            android:name=".NotepadActivity"
+            android:exported="true" />
+        <activity
+            android:name=".dictionaryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TranslationsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Listening_scripts_activity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

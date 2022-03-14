@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Listening_scripts_activity">
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+  <TextView
+      android:layout_marginStart="5dp"
+      android:id="@+id/keywordtxt1"
+      android:layout_width="411dp"
+      android:layout_height="wrap_content"
+      android:text="@string/keywordtxt1"
+      android:textSize="12sp">
+  </TextView>
+   <TextView
+       android:layout_marginStart="5dp"
+       android:id="@+id/keywordtxt3"
+       android:layout_width="411dp"
+       android:layout_height="wrap_content"
+       android:text="@string/keywordtxt2"
+       android:textSize="12sp">
+   </TextView>
+   <TextView
+       android:layout_marginStart="5dp"
+       android:id="@+id/keywordtxt4"
+       android:layout_width="411dp"
+       android:layout_height="wrap_content"
+       android:text="@string/keywordtxt3"
+       android:textSize="12sp">
+   </TextView>
+   <TextView
+       android:layout_marginStart="5dp"
+       android:id="@+id/keywordtxt5"
+       android:layout_width="411dp"
+       android:layout_height="wrap_content"
+       android:text="@string/keywordtxt4"
+       android:textSize="12sp">
+   </TextView>
+   <TextView
+       android:layout_marginStart="5dp"
+       android:id="@+id/keywordtxt6"
+       android:layout_width="411dp"
+       android:layout_height="wrap_content"
+       android:text="@string/keywordtxt5"
+       android:textSize="12sp">
+   </TextView>
+
+  </LinearLayout>
+</ScrollView>
