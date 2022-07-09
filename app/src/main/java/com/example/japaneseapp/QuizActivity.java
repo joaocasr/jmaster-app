@@ -1,7 +1,4 @@
-package com.example.japaneseapp;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+package com.jmaster.japaneseapp;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -14,6 +11,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
@@ -83,7 +83,7 @@ public class QuizActivity extends AppCompatActivity {
         wrongtoast.setDuration(Toast.LENGTH_SHORT);
         wrongtoast.setView(wronglayout);
 
-        final int USER_PROGRESS =(int) Math.ceil(100f/50);
+        final int USER_PROGRESS =(int) Math.ceil(100f/25);
 
         confirm_bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,10 +95,10 @@ public class QuizActivity extends AppCompatActivity {
                     question_txt.setText(kana[num]);
                     progressBar.incrementProgressBy(USER_PROGRESS);
                     ciclos++;
-                    if(ciclos==50){
+                    if(ciclos==25){
                         AlertDialog.Builder alert = new AlertDialog.Builder(QuizActivity.this);
                         alert.setTitle("Quiz finished");
-                        alert.setMessage("Wrong Answers:"+erros+"\nOverall Correct:"+((50-erros)/0.5)+"%\nGo to menu to generate a different quiz.");
+                        alert.setMessage("Overall Correct:"+((50-erros)/0.5)+"\nWrong Answers:"+erros+"%\nGo to menu to generate a different quiz.");
                         alert.setPositiveButton("Menu", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -109,8 +109,12 @@ public class QuizActivity extends AppCompatActivity {
                     }
                 }else{
                     wrongtoast.show();
+                    Random random = new Random();
+                    num = random.nextInt(kana.length);
+                    question_txt.setText(kana[num]);
                     erros++;
                 }
+                answer_txt.getText().clear();
             }
         });
     }
