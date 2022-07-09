@@ -1,7 +1,4 @@
-package com.example.japaneseapp;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+package com.jmaster.japaneseapp;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -14,6 +11,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
@@ -75,7 +75,7 @@ int x=0,wrong=0,cicles=0;
         wrongtoast.setDuration(Toast.LENGTH_SHORT);
         wrongtoast.setView(wronglayout);
 
-        final int PROGRESS =(int) Math.ceil(100f/50);
+        final int PROGRESS =(int) Math.ceil(100f/25);
 
         confirmkata_bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,10 +87,10 @@ int x=0,wrong=0,cicles=0;
                     questionkata_txt.setText(kata[x]);
                     progressBarkata.incrementProgressBy(PROGRESS);
                     cicles++;
-                    if(cicles==50){
+                    if(cicles==25){
                         AlertDialog.Builder alert = new AlertDialog.Builder(KatakanaquizActivity.this);
                         alert.setTitle("Quiz finished");
-                        alert.setMessage("Wrong Answers:"+wrong+"\nOverall Correct:"+((50-wrong)/0.5)+"%\nGo to menu to generate a different quiz.");
+                        alert.setMessage("Overall Correct:"+((50-wrong)/0.5)+"\nWrong Answers:"+wrong+"%\nGo to menu to generate a different quiz.");
                         alert.setPositiveButton("Menu", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -101,8 +101,12 @@ int x=0,wrong=0,cicles=0;
                     }
                 }else{
                     wrongtoast.show();
+                    Random random = new Random();
+                    x = random.nextInt(kata.length);
+                    questionkata_txt.setText(kata[x]);
                     wrong++;
                 }
+                answerkata_txt.getText().clear();
             }
         });
     }
